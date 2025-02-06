@@ -9,8 +9,7 @@ import jakarta.validation.constraints.Size;
 import lombok.*;
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Category {
