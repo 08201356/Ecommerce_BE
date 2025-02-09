@@ -1,7 +1,7 @@
-package base.ecommerce.service;
+package base.ecommerce.service.services;
 
-import base.ecommerce.payload.CategoryDTO;
-import base.ecommerce.payload.CategoryResponse;
+import base.ecommerce.payload.entity_dto.CategoryDTO;
+import base.ecommerce.payload.entity_response.CategoryResponse;
 
 public interface CategoryService {
     CategoryResponse getAllCategories(Integer pageNumber, Integer pageSize, String sortBy, String sortOrder);

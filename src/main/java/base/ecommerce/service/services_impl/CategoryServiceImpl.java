@@ -1,11 +1,12 @@
-package base.ecommerce.service;
+package base.ecommerce.service.services_impl;
 
 import base.ecommerce.exceptions.APIException;
 import base.ecommerce.exceptions.ResourceNotFoundException;
 import base.ecommerce.model.Category;
-import base.ecommerce.payload.CategoryDTO;
-import base.ecommerce.payload.CategoryResponse;
+import base.ecommerce.payload.entity_dto.CategoryDTO;
+import base.ecommerce.payload.entity_response.CategoryResponse;
 import base.ecommerce.repository.CategoryRepository;
+import base.ecommerce.service.services.CategoryService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

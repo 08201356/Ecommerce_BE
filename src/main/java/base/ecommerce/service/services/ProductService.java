@@ -1,7 +1,7 @@
-package base.ecommerce.service;
+package base.ecommerce.service.services;
 
-import base.ecommerce.payload.ProductDTO;
-import base.ecommerce.payload.ProductResponse;
+import base.ecommerce.payload.entity_dto.ProductDTO;
+import base.ecommerce.payload.entity_response.ProductResponse;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;

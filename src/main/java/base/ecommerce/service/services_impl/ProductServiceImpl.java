@@ -1,13 +1,15 @@
-package base.ecommerce.service;
+package base.ecommerce.service.services_impl;
 
 import base.ecommerce.exceptions.APIException;
 import base.ecommerce.exceptions.ResourceNotFoundException;
 import base.ecommerce.model.Category;
 import base.ecommerce.model.Product;
-import base.ecommerce.payload.ProductDTO;
-import base.ecommerce.payload.ProductResponse;
+import base.ecommerce.payload.entity_dto.ProductDTO;
+import base.ecommerce.payload.entity_response.ProductResponse;
 import base.ecommerce.repository.CategoryRepository;
 import base.ecommerce.repository.ProductRepository;
+import base.ecommerce.service.services.FileService;
+import base.ecommerce.service.services.ProductService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,7 +23,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Service
-public class ProductServiceImpl implements ProductService{
+public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepository productRepository;
     @Autowired

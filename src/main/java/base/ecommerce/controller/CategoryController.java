@@ -1,9 +1,9 @@
 package base.ecommerce.controller;
 
 import base.ecommerce.config.AppConstant;
-import base.ecommerce.payload.CategoryDTO;
-import base.ecommerce.payload.CategoryResponse;
-import base.ecommerce.service.CategoryService;
+import base.ecommerce.payload.entity_dto.CategoryDTO;
+import base.ecommerce.payload.entity_response.CategoryResponse;
+import base.ecommerce.service.services.CategoryService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
