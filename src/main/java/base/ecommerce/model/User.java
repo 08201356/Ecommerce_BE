@@ -28,7 +28,7 @@ public class User {
 
     @NotBlank
     @Size(max = 40)
-    private String userName;
+    private String username;
 
     @NotBlank
     @Email
@@ -54,8 +54,8 @@ public class User {
     @OneToMany(mappedBy = "user" ,cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)
     private Set<Product> products;
 
-    public User(String userName, String email, String password) {
-        this.userName = userName;
+    public User(String username, String email, String password) {
+        this.username = username;
         this.email = email;
         this.password = password;
     }

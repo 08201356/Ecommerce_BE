@@ -1,4 +1,4 @@
-package base.ecommerce.security;
+package base.ecommerce.security.jwt;
 
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;

@@ -1,4 +1,4 @@
-package base.ecommerce.security;
+package base.ecommerce.security.jwt;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
