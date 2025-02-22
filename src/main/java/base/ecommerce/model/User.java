@@ -18,7 +18,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "users", uniqueConstraints = {
-                                    @UniqueConstraint(columnNames = "user_name"),
+                                    @UniqueConstraint(columnNames = "username"),
                                     @UniqueConstraint(columnNames = "email")
                                     })
 public class User {
@@ -27,7 +27,8 @@ public class User {
     private Long userId;
 
     @NotBlank
-    @Size(max = 40)
+    @Column(name = "username")
+    @Size(min=3, max = 40)
     private String username;
 
     @NotBlank
@@ -36,7 +37,6 @@ public class User {
     private String email;
 
     @NotBlank
-    @Size(max = 50)
     private String password;
 
     @ManyToMany (cascade = {CascadeType.PERSIST, CascadeType.MERGE})
@@ -46,7 +46,7 @@ public class User {
     private Set<Role> roles = new HashSet<>();
 
     @ManyToMany (cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinTable (name = "user_role",
+    @JoinTable (name = "user_address",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "address_id"))
     private List<Address> addresses = new ArrayList<>();
