@@ -33,7 +33,7 @@ public class Address {
     private String district;
 
     @NotBlank
-    @Size(min = 5, message = "Province name must be at least 5 characters long.")
+    @Size(min = 3, message = "Province name must be at least 3 characters long.")
     private String province;
 
     @NotBlank
@@ -44,8 +44,9 @@ public class Address {
     @Size(min = 5, message = "Pin code must be at least 5 characters long.")
     private String pinCode;
 
-    @ManyToMany(mappedBy = "addresses")
-    private List<User> users = new ArrayList<>();
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public Address(String street, String buildingName, String district, String province, String country, String pinCode) {
         this.street = street;
